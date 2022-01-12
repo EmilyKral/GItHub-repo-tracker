@@ -8,37 +8,39 @@ function Home({ updateUsername }) {
 	const username = useContext(Username);
 	const [repoData, setRepoData] = useState();
 	const [userData, setUserData] = useState();
+	const [error, setError] = useState(false);
 
 	useEffect(() => {
 		async function getRepoData() {
-			// setStatusMessage("Retrieving Data");
 			try {
+				console.log("REQUEST");
 				let uData = await axios.get(`https://api.github.com/users/${username}`);
-				console.log("uData", uData.data.name);
 				setUserData(uData.data);
-				console.log("user", userData);
 				let rData = await axios.get(`https://api.github.com/users/${username}/repos`);
 				setRepoData(rData.data);
-				console.log("repo", repoData);
+				setError(false);
 			} catch (err) {
 				console.warn(err);
-				// setStatusMessage(`Oops there\'s been an issue! ${err.message}`);
+				setError(true);
+				updateUsername("");
 			}
 		}
-		getRepoData();
+		if (username) {
+			getRepoData();
+		}
 	}, [username]);
 
-	console.log("user data before return", userData);
 	return (
-		<>
+		<main>
 			<InputForm updateUsername={updateUsername} />
+			{error && <p>Something went wrong! Are you sure you entered the username correctly?</p>}
 			{username && (
 				<>
 					<Bio userData={userData} />
 					<RepoList repoData={repoData} />
 				</>
 			)}
-		</>
+		</main>
 	);
 }
 

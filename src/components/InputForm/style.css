@@ -1,0 +1,39 @@
+#submit,
+#search-again {
+	font-family: Arial;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 14px;
+	color: #000;
+	border: 2px solid #333;
+	border-radius: 16px;
+	text-transform: uppercase;
+	padding: 3px 12px;
+	margin: 0 20px 15px;
+	background-color: #fff;
+}
+
+#submit:hover,
+#search-again:hover {
+	cursor: pointer;
+	background-color: #333;
+	color: white;
+}
+
+#username-label {
+	margin-right: 10px;
+}
+
+#username {
+	font-family: Arial;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 16px;
+	padding: 3px 5px;
+	margin-bottom: 30px;
+	width: 200px;
+}
+
+/* input[type="text"]::placeholder {
+	text-align: left;
+} */

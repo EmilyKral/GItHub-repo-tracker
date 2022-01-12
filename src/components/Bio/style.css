@@ -1,0 +1,11 @@
+#bio-info {
+	display: flex;
+}
+
+#bio-info img {
+	width: 150px;
+}
+
+#user-name {
+	margin-top: 10px;
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Home } from "./pages";
 import { Header, Footer } from "./layout";
 import { Username } from "./contexts";
-// import "./App.css";
+import "./App.css";
 
 function App() {
 	const [username, setUsername] = useState("");
