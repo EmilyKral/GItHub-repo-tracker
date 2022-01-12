@@ -1,16 +1,22 @@
 import React from "react";
 
-const Bio = userData => {
+function Bio({ userData }) {
+	console.log("userData", userData);
 	return (
 		<div>
-			<p>paragraph</p>
-			<ul>
-				<li>No. of repositories: {userData.public_repos} </li>
-				<li>Followers: {userData.followers} </li>
-				<li>Following: {userData.following} </li>
-			</ul>
+			{userData && (
+				<>
+					<img src={userData.avatar_url} />
+					<p>{userData.name}</p>
+					<ul>
+						<li>No. of repositories: {userData.public_repos} </li>
+						<li>Followers: {userData.followers} </li>
+						<li>Following: {userData.following} </li>
+					</ul>
+				</>
+			)}
 		</div>
 	);
-};
+}
 
 export default Bio;

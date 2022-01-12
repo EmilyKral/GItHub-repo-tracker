@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 function Repo({ data }) {
 	const [seeMore, setSeeMore] = useState(false);
-	const lastUpdate = data.updated_at.split("T")[0] + data.updated_at.split("T")[1].substring(0, 4);
+	const lastUpdate =
+		data.updated_at.split("T")[0] + " at " + data.updated_at.split("T")[1].substring(0, 5);
 	return (
 		<div>
 			<h3>
