@@ -1,7 +1,12 @@
 import React from "react";
+import { InputForm } from "../../components";
 
 function Home() {
-	return <></>;
+	return (
+		<>
+			<InputForm />
+		</>
+	);
 }
 
 export default Home;
