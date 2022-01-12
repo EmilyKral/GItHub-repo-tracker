@@ -1,10 +1,11 @@
-import React from "react";
-import { InputForm } from "../../components";
+import React, { useContext } from "react";
+import { InputForm, Bio } from "../../components";
 
-function Home() {
+function Home({ updateUsername }) {
 	return (
 		<>
-			<InputForm />
+			<InputForm updateUsername={updateUsername} />
+			<Bio />
 		</>
 	);
 }
