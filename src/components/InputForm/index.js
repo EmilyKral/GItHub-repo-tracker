@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
-function InputForm() {
-	const [username, setUsername] = useState("");
+function InputForm({ updateUsername }) {
 	const [nameInput, setNameInput] = useState("");
 
 	const handleInput = e => setNameInput(e.target.value);
 
 	const handleFormSubmit = e => {
 		e.preventDefault();
-		setUsername(nameInput);
+		updateUsername(nameInput);
 		setNameInput("");
 	};
 

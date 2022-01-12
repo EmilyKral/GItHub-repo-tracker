@@ -1,4 +1,4 @@
-const initState = { username: "", repoData: {}, error: "" };
+const initState = { username: "", repoData: [], error: "" };
 
 const searchReducer = (state = initState, action) => {
 	switch (action.type) {
