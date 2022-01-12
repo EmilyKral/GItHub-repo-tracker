@@ -9,7 +9,7 @@ function Repo({ data }) {
 	return (
 		<div className="repo">
 			<h3 className="repo-name">
-				<a href={data.url} target="_blank">
+				<a href={data.html_url} target="_blank">
 					{data.name}
 				</a>
 			</h3>
