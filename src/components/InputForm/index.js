@@ -21,7 +21,7 @@ function InputForm({ updateUsername }) {
 			{searching ? (
 				<form onSubmit={handleFormSubmit}>
 					<label htmlFor="username" id="username-label">
-						Username
+						Username:
 					</label>
 					<input
 						type="text"
@@ -30,6 +30,7 @@ function InputForm({ updateUsername }) {
 						placeholder="Type GitHub username"
 						value={nameInput}
 						onChange={handleInput}
+						required
 					/>
 					<input type="submit" value="submit" id="submit" />
 				</form>
