@@ -1,0 +1,21 @@
+#bio-info {
+	display: flex;
+}
+
+#bio-info img {
+	width: 200px;
+	border-radius: 10px;
+}
+
+#user-name {
+	margin-top: 10px;
+}
+
+#bio-list {
+	padding-left: 15px;
+}
+
+#bio-list li {
+	list-style: none;
+	margin-bottom: 25px;
+}
